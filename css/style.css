@@ -145,39 +145,30 @@ Resuable code section
     grid-template-columns: repeat(4, 1fr);
 }
 
-@media screen and (max-width:767px) and (min-width:580px){
-    .container .common-heading{
-        text-align: center;
-        justify-content: center;
-    }
-
-    .common-heading::before,
-    .common-heading::after{
-        content: '';
-        position: absolute;
-        width: 35rem;
-    }
-
-    .container{
-        margin: 0 20rem;
-    }
-}
-
-@media screen and (max-width:582px){
+@media screen and (max-width:585px) and (min-width:510px){
     .container .common-heading{
         font-size: 3rem;
+        font-weight: 600;
     }
 }
 
-@media screen and (max-width:450px) and (min-width:360px){
-    .container{
-        margin: 0 5rem;
+@media screen and (max-width:509px) {
+    .container .common-heading{
+        font-size: 2.3rem;
+        font-weight: 600;
+        position: relative;
     }
-}
 
-@media screen and (max-width:359px) {
     .container{
-        margin: 0 6rem;
+        margin: 0 3rem;
+    }
+
+    .common-heading::before{
+
+    }
+
+    .container .common-heading::after{
+        top: 128%;
     }
 }
 
@@ -313,7 +304,7 @@ Hero Section Start
 
     #hero{
         justify-content: center;
-        margin: 0 4rem;
+        margin: 0 3rem;
         text-align: center;
     }
 
@@ -331,8 +322,8 @@ Hero Section Start
     }
 
     .btn{
-        padding: 0.8rem 0.8rem;
-        font-size: 1.2rem;
+        padding: 1.2rem 1.4rem;
+        font-size: 1.5rem;
     }
 
     .section-hero-data{
@@ -351,23 +342,14 @@ Hero Section Start
         
     }
 
-    .section-about{
+    #about1{
+        margin: 0 3rem;
         justify-content: center;
         text-align: center;
-    }
-
-    #about1{
-        margin: 0 6rem;
     }
 
     .education .contents{
-        padding: 0px 3rem;
-    }
-
-    .section-about{
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
+        padding: 0px 1rem;
     }
 
     .bio-data h3{
@@ -394,8 +376,8 @@ Hero Section Start
 
 .bio-data{
     justify-content: center;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* margin-bottom: 3rem; */
 }
 
@@ -517,11 +499,11 @@ Hero Section Start
 
     .section-services .grid{
         gap: 6rem;
-        margin: 5rem 8rem;
+        margin: 0rem 8rem;
     }
 
     .service-box{
-        padding: 4.4rem 2.4rem;
+        padding: 2.4rem 2.4rem;
     }
 
     
@@ -532,7 +514,7 @@ Hero Section Start
         grid-template-columns: 1fr;
     }
     .section-services .grid{
-        margin: 10rem 5rem;
+        margin: 0rem 3rem;
         gap: 3rem;
     }
 }
@@ -590,13 +572,13 @@ Hero Section Start
 
 @media screen and (max-width:750px){
     .project-section .grid{
-        padding: 5rem 5rem;
+        padding: 0rem 3rem;
     }
 }
 
 @media screen and (max-width:1000px) and (min-width:750px){
     .project-section .grid{
-        padding: 5rem 5rem ;
+        padding: 0rem 3rem ;
     }
 
     .skill-section .grid{
@@ -634,7 +616,7 @@ Hero Section Start
 .skill-stat:active{
     /* transform: translateY(-3rem); */
     cursor: pointer;
-    box-shadow: 1rem .5rem .5rem var(--black);
+    /* box-shadow: 1rem .5rem .5rem var(--black); */
     transform: scale(1.1);
 }
 
@@ -657,33 +639,51 @@ Hero Section Start
     }
 }
 
-@media screen and (max-width:997px) and (min-width:750px){
+@media screen and (max-width:997px) and (min-width:700px){
     .grid-five-column{
         grid-template-columns: repeat(3,1fr);
     }
 
     .skill-section .grid{
-        margin: 5rem 8rem;
+        margin: 5rem 4rem;
     }
 }
 
-@media screen and (max-width:749px) and (min-width:530px){
+@media screen and (max-width:699px) and (min-width:400px){
     .grid-five-column{
         grid-template-columns: repeat(2,1fr);
     }
 
     .skill-section .grid{
-        margin: 5rem 8rem;
+        margin: 5rem 3rem;
     }
 }
 
-@media screen and (max-width:520px){
+@media screen and (max-width:399px) and (min-width:300px){
+    .grid-five-column{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .skill-section .grid{
+        margin: 5rem 3rem;
+    }
+
+    .skill-icon{
+        width: 8rem;
+        height: 8rem;
+        display: inline-block;
+        padding: .5rem .5rem;
+        
+    }
+}
+
+@media screen and (max-width:299px){
     .grid-five-column{
         grid-template-columns: 1fr;
     }
 
     .skill-section .grid{
-        margin: 5rem 8rem;
+        margin: 5rem 2rem;
     }
 
     .skill-icon{
@@ -694,6 +694,7 @@ Hero Section Start
         
     }
 }
+
 /* ================================== Contact Section Styling ========================= */
 
 
@@ -703,15 +704,14 @@ Hero Section Start
     row-gap: 1rem;
 }
 
+
 .contact-stat{
     text-align: center;
     box-shadow: var(--shadow);
     border-radius: 5px;
     padding: 5rem 2rem;
     /* transition: all 0.2s linear; */
-    transition: transform 0.3s;
-
-    
+    transition: transform 0.3s;   
 }
 
 
@@ -721,7 +721,7 @@ Hero Section Start
     /* transform: translateY(-3rem); */
     cursor: pointer;
     transform: scale(1.1);
-    box-shadow: 10px 5px 5px var(--black);
+    /* box-shadow: 10px 5px 5px var(--black); */
 }
 
 .contact-icon{
@@ -751,7 +751,7 @@ Hero Section Start
 
     .contact-section .grid{
         gap: 5rem;
-        margin: 5rem 8rem;
+        margin: 5rem 5rem;
     }
 
     .contact-stat{
@@ -762,7 +762,7 @@ Hero Section Start
 @media screen and (max-width:989px) and (min-width:650px){
     .grid-four-column{
         grid-template-columns: 1fr 1fr;
-        margin: 5rem 8rem;
+        margin: 0rem 6rem;
     }
 
     .contact-section .grid{
@@ -822,6 +822,7 @@ Hero Section Start
         margin: 0 2rem;
     }
 }
+
 /* ====================================== scroll to top styling ============================== */
 
 .scroll-top{
